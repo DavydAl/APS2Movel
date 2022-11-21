@@ -1,0 +1,7 @@
+{
+  "name": "APS2-Movel",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

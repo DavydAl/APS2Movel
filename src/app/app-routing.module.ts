@@ -7,8 +7,9 @@ const routes: Routes = [
     redirectTo: 'login',
     pathMatch: 'full'
   },
-  { path: 'login', loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule) },
-  { path: 'folder/:id', loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule) }
+  { path: 'login', loadChildren: () => import('./login/login.module').then(m => m.LoginPageModule) },
+  { path: 'feed', loadChildren: () => import('./feed/feed.module').then(m => m.FeedPageModule) },
+  { path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomePageModule) }
 
 
 ];
@@ -19,4 +20,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

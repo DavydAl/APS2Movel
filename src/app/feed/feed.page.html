@@ -18,23 +18,36 @@
 </ion-content> -->
 <!-- 
 //https://www.youtube.com/watch?v=4OJROowVLVY -->
-
 <ion-header>
   <ion-toolbar>
-    <ion-title>feed</ion-title>
+    <ion-title>Users</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="inicio"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-item *ngFor="let products of products">
-      <ion-avatar><img src="" alt=""></ion-avatar>
-      {{products}}
-    </ion-item>
-  </ion-list>
 
-  <!-- <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
-    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
-    </ion-infinite-scroll-content>
-  </ion-infinite-scroll> -->
+  <ion-grid>
+    <ion-row>
+      <ion-col sizeMd="4" offsetMd="4">
+        <ion-list>
+          <ion-item *ngFor="let personagem of personagens">
+            <ion-avatar slot="start">
+              <img src="{{personagem.image}}">
+            </ion-avatar>
+            <ion-label>{{personagem.name}}</ion-label>
+
+          </ion-item>
+        </ion-list>
+        <!--  -->
+        <!-- <ion-infinite-scroll threshold="5%" id="infinite-scroll" (ionInfinite)="loadData(personagens)">
+          <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Carregando">
+          </ion-infinite-scroll-content>
+        </ion-infinite-scroll> -->
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>

@@ -1,0 +1,39 @@
+ion-input {
+  margin: 5% 0% 10% 0%;
+  border: chartreuse 1px solid;
+}
+
+ion-card {
+  border-radius: 10px;
+  background-color: white;
+  margin-top: 10%;
+  text-align: initial;
+  position: absolute;
+  font-weight: bold;
+}
+
+ion-card-title {
+  text-align: center;
+  color: rgb(21, 83, 170);
+
+}
+
+ion-img {
+  filter: blur(3px);
+  margin: -5%;
+}
+
+.eu {
+  margin: 5% 0;
+  width: 100%;
+}
+
+.redes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+ion-icon {
+  zoom: 3.5
+}

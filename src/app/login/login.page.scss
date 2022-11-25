@@ -1,0 +1,39 @@
+ion-input {
+  margin: 5% 0% 10% 0%;
+  border: chartreuse 1px solid;
+}
+
+.inputs {
+  color: rgb(21, 83, 170);
+  text-align: left !important;
+  font-size: 20px;
+  padding: 10%;
+}
+
+
+ion-card {
+  opacity: 0.75;
+  border-radius: 10%;
+  background-color: white;
+  text-align: center;
+  margin: 42% 10%;
+  position: absolute;
+  width: 80%;
+  font-weight: bold;
+}
+
+ion-card-title {
+  color: rgb(21, 83, 170);
+  margin: 10% 10% 0% 10%;
+}
+
+ion-img {
+  filter: blur(3px);
+  margin: -5%;
+}
+
+
+ion-button {
+  margin-top: -2%;
+  margin-bottom: 5%;
+}

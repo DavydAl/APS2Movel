@@ -18,7 +18,7 @@
 </ion-content> -->
 <!-- 
 //https://www.youtube.com/watch?v=4OJROowVLVY -->
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <ion-title>Users</ion-title>
     <ion-buttons slot="start">
@@ -41,13 +41,52 @@
 
           </ion-item>
         </ion-list>
-        <!--  -->
-        <!-- <ion-infinite-scroll threshold="5%" id="infinite-scroll" (ionInfinite)="loadData(personagens)">
+
+   <ion-infinite-scroll threshold="5%" id="infinite-scroll" (ionInfinite)="loadData(personagens)">
           <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Carregando">
           </ion-infinite-scroll-content>
         </ion-infinite-scroll> -->
+<!-- </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>  -->
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Feed de Filmes
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-refresher slot="fixed" [pullFactor]="0.5" [pullMin]="100" [pullMax]="200" (ionRefresh)="handleRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col sizeMd="4" offsetMd="4">
+        <ion-list>
+          <ion-item *ngFor="let personagem of personagem">
+            <ion-avatar slot="start">
+              <img src="{{personagem.image}}">
+            </ion-avatar>
+            <ion-label>{{personagem.name}}</ion-label>
+
+          </ion-item>
+        </ion-list>
       </ion-col>
     </ion-row>
   </ion-grid>
+
+
+
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="efeitoScrollInfinito($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Buscando mais..">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
 
 </ion-content>

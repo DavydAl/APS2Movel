@@ -5,11 +5,11 @@
   <ion-card-title>Login</ion-card-title>
   <div class="inputs">
     <span>Usuário:</span>
-    <ion-input type="email" placeholder="email@domain.com"></ion-input>
+    <ion-input type="email" [(ngModel)]="usuario" placeholder="email@domain.com"></ion-input>
     <span>Senha:</span>
-    <ion-input type="password"></ion-input>
+    <ion-input type="password" [(ngModel)]="senha"></ion-input>
 
   </div>
-  <ion-button>Entrar</ion-button>
+  <ion-button (click)="login()">Entrar</ion-button>
 
 </ion-card>

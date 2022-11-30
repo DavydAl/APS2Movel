@@ -21,7 +21,7 @@ export class LoginPage implements OnInit {
 
   login() {
     this.ususarioService.loginNoFireBase(this.usuario, this.senha).then((res) => {
-      this.router.navigate(['app/home']);
+      this.router.navigate(['home']);
     }).catch((error) => {
       this.msg = "Usuario e/ou senha incorretos";
       this.exibeMensagem();

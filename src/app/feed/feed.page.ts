@@ -46,7 +46,7 @@ export class FeedPage {
       this.page++;
       this.carregaPagina();
 
-    }, 100);
+    }, 1500);
   }
 
 

@@ -13,14 +13,15 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 
+
 @NgModule({
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   declarations: [AppComponent],
   imports: [BrowserModule, IonicModule.forRoot(),
     AppRoutingModule, HttpClientModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })

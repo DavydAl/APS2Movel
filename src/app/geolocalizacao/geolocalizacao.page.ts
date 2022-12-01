@@ -1,8 +1,9 @@
 import { Component, OnInit, CUSTOM_ELEMENTS_SCHEMA, ElementRef, ViewChild } from '@angular/core';
 
-import { GoogleMap, Marker } from '@capacitor/google-maps';
+import { GoogleMap } from '@capacitor/google-maps';
 import { environment } from 'src/environments/environment.prod';
 
+let map: GoogleMap;
 
 @Component({
   selector: 'app-geolocalizacao',
@@ -11,14 +12,12 @@ import { environment } from 'src/environments/environment.prod';
 })
 export class GeolocalizacaoPage implements OnInit {
   @ViewChild('map') mapRef!: ElementRef;
-  map: GoogleMap | undefined;
-  markers: any;
 
-  constructor(public geolocation: Geolocation) {
+
+  constructor() {
   }
 
   ngOnInit() {
-
   }
 
   ionViewDidEnter() {
@@ -26,7 +25,7 @@ export class GeolocalizacaoPage implements OnInit {
   }
 
   async createMap() {
-    this.map = await GoogleMap.create({
+    map = await GoogleMap.create({
       id: 'my-map',
       apiKey: environment.mapsKey,
       element: this.mapRef.nativeElement,
@@ -43,5 +42,23 @@ export class GeolocalizacaoPage implements OnInit {
   }
 
 
+
+
+  // newMap: GoogleMap | undefined;
+
+  // async createMap() {
+  //   this.newMap = await GoogleMap.create({
+  //     id: 'my-cool-map',
+  //     element: this.mapRef.nativeElement,
+  //     apiKey: environment.mapsKey,
+  //     config: {
+  //       center: {
+  //         lat: 33.6,
+  //         lng: -117.9,
+  //       },
+  //       zoom: 8,
+  //     },
+  //   });
+  // }
 
 }

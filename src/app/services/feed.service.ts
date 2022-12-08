@@ -14,11 +14,15 @@ export class FeedService {
   //   return this.httpClient.get<RickAndMort[]>('https://rickandmortyapi.com/api/character');
   // }
 
+  abrePersonagem(profileId: number) {
+    let personagens = `https://rickandmortyapi.com/api/character/${profileId}`;
+    return this.httpClient.get(personagens);
+  }
+
 
   listarPersonagens(page = 1) {
     let personagens = `https://rickandmortyapi.com/api/character?page=${page}`;
     return this.httpClient.get(personagens);
-
   }
 
 }

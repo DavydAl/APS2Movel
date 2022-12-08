@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Personagem</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="feed"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-img src="/assets/fundo.jpg" alt="The Wisconsin State Capitol building in Madison, WI at night"></ion-img>
+<ion-card *ngFor="let personagem of personagem">
+  <ion-card-content>
+    <img src="{{personagem.image}}" alt="">
+    <div class="conteudo">
+      <ion-card-title>
+        Nome: {{personagem.name}}
+      </ion-card-title>
+      <ion-card-title>
+        Espécie: {{personagem.species}}
+      </ion-card-title>
+      <ion-card-title>
+        Status: {{personagem.status}}
+      </ion-card-title>
+      <ion-card-title>
+        Exibido: {{personagem.created | date:'dd/MM/yyyy'}}
+      </ion-card-title>
+    </div>
+  </ion-card-content>
+
+</ion-card>
